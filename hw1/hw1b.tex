@@ -1,0 +1,134 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{enumitem}
+\usepackage{listings,multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+% \fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+    \normalfont \normalsize 
+    \textsc{CS 3060 Programming Languages, Spring 2022} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Assignment \#1  \\ % The assignment title
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% \author{John Smith} % Your name
+
+% \date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+    \begin{center}
+         Homework \#1\\
+        \small CS 3060 Programming Languages, Fall 2022 \\
+        \small Instructor: S. Roy \\
+        \huge Ruby \#1b
+    \end{center}
+    
+    \textbf{Due Date:}  Sep 2 (11:59 pm).\\
+
+    \textbf{Total points:} 45 points \\
+
+    \textbf{Directions:} For each of the following tasks you need to write a program. 
+Then, you run the program and submit the code for each task. You need also submit a README file 
+which lists sample input and sample output of all the programs. 
+Check Gitlab \@ \texttt{https://gitlab.com/sanroy/fa22-cs3060-hw} (or check Canvas) for details. 
+The prefered process for completing this assignment should be as follows:
+
+    \begin{enumerate}[noitemsep]
+        \item Fork the Repository ``fa22-cs3060-hw'' to a new Repository named ``fa22-cs3060-hw'' 
+under your namespace (your gitlab username).
+        \item "git clone" the newly created repository on your local machine
+        \item Complete this assignment whose details are in hw1 sub-folder, committing changes to files in hw1. 
+        \item Push all commits to your Gitlab repository
+        \item Add TA (with his gitlab username ayerrab) and Roy (gitlab username is sanroy) as a developer of your Gitlab repository
+    \end{enumerate}
+
+If for some reason Gitlab does not work for you, then you submbit the ruby code and README file on Canvas.
+
+    \textbf{Tasks:}
+    \begin{enumerate}[noitemsep]
+
+        \item \textbf{(9 Points) program \#1:} Ask the user to type 4 lines 
+(e.g., before going to the next line the user will hit the 'Enter' key, etc.) 
+on keyboard, and your program should save the lines, appended with line number, to a file named "myFile.txt". 
+Then, your program also needs to process the file: for each line reports the total number of characters 
+that are present.
+
+Below is an example. 
+
+The user's input is as follows: 
+
+\texttt{abcd def 123 ghi}\\
+\texttt{abcd def 456 klmn}\\
+\texttt{abcd def 789 ghi}\\
+\texttt{klmn def 123 klmn}
+
+Then, myFile.txt gets the following content:
+
+\texttt{L1:abcd def 123 ghi}\\
+\texttt{L2:abcd def 456 klmn}\\
+\texttt{L3:abcd def 789 ghi}\\
+\texttt{L4:klmn def 123 klmn}
+
+And, the output is as follows.
+L1: 20, L2: 21, L3: 20, L4: 21.
+
+        \item \textbf{(6 Points) program \#2:} Ask the user to type the name of a file. 
+Then, search the content of the file. 
+If each line of the file contains 
+``Python'' or ``Ruby'', then print ``The file is important'';
+otherwise, print "The file is worthless". 
+
+        \item \textbf{(6 Points) program \#3:} Write a function foo(n) to compute the value of $x^x$ without 
+using the exponent operator, (i.e., your need to use the loop syntax) whereas $x$ is a positive integer. 
+Test your program at least for 3 values of x such as 5, 6, and 7.
+
+        \item \textbf{(3 Points) program \#4:} Print the string ``The $7$-th multiple of integer $n$ is $x$'' 
+while substituting $n$ by numbers from 5 to 10 and $x$ by the value of $7n$.
+        \item \textbf{(6 Points) program \#5:} Let the user pick a number (say $x$) between 5 and 25. 
+Now your program simulates tossing a coin $x$ times. 
+In particular, your program can contain a loop and in each iteration it randomly makes a choice: 
+head (represented by string 'HEAD') or 
+tail (represented by string 'TAIL'), and stores the outcome ('HEAD' or 'TAIL') 
+in an array. After the iterations, traverse the array and count how many heads and tails were generated. 
+Also, report the ratio of number of heads and number of tails.
+
+        \item \textbf{(15 Points) program \#6:} Go to \texttt{http://www.textfiles.com/stories/} and check that this site 
+\footnote {Disclaimer: we did not really check whether this website contains any improper story or language. 
+If you find something improper, please ignore this site and use some other source} hosts multiple stories 
+while each story is in a textfile. Download two textfiles of your choice, which have atleast 600 words, 
+and save the files as \texttt{storyA.txt} and \texttt{storyB.txt}. Your program needs to read these files and processes 
+them to collect some statistics. In particular, for each story $x$ report the the number of unique words in $x$, 
+the fourth-most frequent word in $x$ and its frequency. Also, your program needs to report the number of unique words that are present in both the files.
+
+\textbf {Hints:} A template code is given to you. We use Array and Hash data structures as they are available in Ruby. You may design a regular expression to define a \emph{word}.  
+    
+\end{enumerate}
+ 
+\end{document}

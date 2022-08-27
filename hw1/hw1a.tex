@@ -1,0 +1,89 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{enumitem}
+\usepackage{listings,multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+% \fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+    \normalfont \normalsize 
+    \textsc{CS 3060 Programming Languages, Fall 2022} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Assignment \#1a  \\ % The assignment title
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% \author{John Smith} % Your name
+
+% \date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+    \begin{center}
+         Homework \#1\\
+        \small CS 3060 Programming Languages, Fall 2022 \\
+        \small Instructor: S. Roy \\
+        \huge Ruby \#1a
+    \end{center}
+    
+    \textbf{Due Date:}  Aug 26 (11:59 pm).\\
+
+    \textbf{Total points:} 15 points \\
+
+    \textbf{Directions:} 
+Check Gitlab \@ \texttt{https://gitlab.com/sanroy/fa22-cs3060-hw} (or check Canvas) for details. 
+The prefered process for completing this assignment should be as follows:
+
+    \begin{enumerate}[noitemsep]
+        \item Fork the Repository ``fa22-cs3060-hw'' to a new Repository named ``fa22-cs3060-hw'' 
+under your namespace (your gitlab username).
+        \item "git clone" the newly created repository on your local machine
+        \item Complete this assignment whose details are in hw1 sub-folder, committing changes to files in hw1. 
+        \item Push all commits to your Gitlab repository
+        \item Add TA (with his gitlab username ) and Roy (gitlab id is sanroy) as a developer of your Gitlab repository
+    \end{enumerate}
+
+If for some reason Gitlab does not work for you, then you submbit your work and README file on Canvas.
+
+    \textbf{Tasks:}
+    \begin{enumerate}[noitemsep]
+
+         \item \textbf{(10 Points) Task \#1:} Write a C program that prints the following: 
+"Hello, C is a static type language whereas Ruby is a dynamic type language". 
+Use gcc command to compile the program to generate an executable file named myExe. Google a little to know
+how to do it using a flag with the gcc command. Submit a screenshot showing the gcc command. 
+Then, open the file myExe in pico editor and check the content of myExe. Is it readable? Submit a screenshot. 
+Then, run myExe and report the outcome. Submit a screenshot showing the command. Also, submit your C program.
+
+\item \textbf{(5 Points) Task \#2:}
+Now write  a Ruby program that prints the same message as above. 
+Do you need the compilation step? Also, submit your Ruby program.  
+Then, run the above ruby program and report the outcome. Submit a screenshot showing the command.
+What is the name of the executable file?    
+\end{enumerate}
+ 
+\end{document}
