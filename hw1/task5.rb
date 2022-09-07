@@ -9,7 +9,6 @@ while (numGen < 5 || numGen > 25)
     numGen = gets.chomp.to_i
 end
 
-
 #coinRand = ['HEADS', 'TAILS']
 coinResults = Array.new
 coinResults = ()
