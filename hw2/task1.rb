@@ -8,7 +8,9 @@ def fileSearch
 
         arrWords.each do |theWord|
             if theWord[0] =~ /[A-Z]/ && theWord[-1] =~ /[a-z]/ && theWord =~ /[aeiou]/
-               p arrWords
+               print "Line#{i}: "
+               print arrWords
+               puts " "
                #p theWord
             end
         end
