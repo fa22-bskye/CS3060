@@ -1,10 +1,14 @@
 class Tree
 
     @@root = 0
-    attr_accessor :children, :node_name, :index
+    @@leaves = 0
+    attr_accessor :children, :node_name
 
     def initialize(name, children)
         @children = children
+        if children.empty?
+            @@leaves += 1
+        end
         @node_name = name; @@root += 1
     end
 
@@ -20,6 +24,9 @@ class Tree
 
     def self.root
         @@root
+    end
+    def self.leaves
+        @@leaves
     end
     
 end
@@ -50,5 +57,6 @@ ruby_tree.visit_all{|x| puts x.node_name}
 puts
 
 puts "#{Tree.root} nodes"
-puts "8 Children"
+puts "#{Tree.leaves} children"
+
 
