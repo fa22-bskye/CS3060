@@ -1,0 +1,1 @@
+task4 for hw2. Makes a tree of nested hashes. Outputs children and total nodes.
