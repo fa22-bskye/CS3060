@@ -6,3 +6,9 @@ Then uses if else statements to see which strings have
 certain phrases using Lists. Keys1 and Keys2 is used to
 see which lines have those phrases contained in them.
 Then outputs certain phrases.
+
+Results:
+The file is awesome.
+The file is awesome.
+The file content is good.
+The file is boring.
